@@ -20,10 +20,14 @@ rl.question('Enter a new package name: ', function(newName) {
     // Update the appBundleId field in the package.json object
     packageJson.appBundleId = newAppBundleId;
 
-    // Write the updated package.json object to the file
-    fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
+    rl.question('Enter a new save file name: ', function(newSaveFileName) {
+      packageJson.savefilename = newSaveFileName;
 
-    console.log('package.json has been updated!');
-    rl.close();
+      // Write the updated package.json object to the file
+      fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
+
+      console.log('package.json has been updated!');
+      rl.close();
+    });
   });
 });
