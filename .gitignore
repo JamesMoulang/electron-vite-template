@@ -2,7 +2,6 @@ node_modules
 .DS_Store
 development/dist
 development/public/game-assets/circle.png
-development/index.html
 production/game-assets
 production/assets
 production/index.html
