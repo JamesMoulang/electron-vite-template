@@ -6,13 +6,26 @@
 
 # Scripts
 
-## First time setup
+`install_all`
 
-`install_all` run yarn install in `root` `production` `development`
+run yarn install in `root` `production` `development`
 
-`dev` run a dev server to host the contents of `development`
-`build` build the contents of `development` and copy into `production`
-`preview` preview the static-asset version of the game in `development/dist`
+`dev`
 
-`copy_built` copy from `development/dist` into `production`
-`build_no_copy` build with copying into `production`
+run a dev server to host the contents of `development`
+
+`build`
+
+build the contents of `development` and copy into `production`
+
+`preview`
+
+preview the static-asset version of the game in `development/dist`
+
+`copy_built`
+
+copy from `development/dist` into `production`
+
+`build_no_copy`
+
+build with copying into `production`
