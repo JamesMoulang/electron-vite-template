@@ -13,8 +13,6 @@
 
 ## Typical workflow
 
-Setup -> develop -> build -> test -> distribute
-
 `appi` -> `install_all` -> `dev` -> `build` -> `start` -> `dist`
 
 ## Individual commands
