@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>nasin sona musi tu</title>
+  <style>
+    html, body, #root {
+      width:  100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background-color: #21252D;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -khtml-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+      -webkit-tap-highlight-color:rgba(0,0,0,0);
+      overscroll-behavior-x: none;
+    }
+
+    #loading, #smile {
+      color: #F4F4F4;
+      font-size: 64px;
+      font-family: sans-serif;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1 id='loading'>Loading</h1>
+  <h1 id='smile'></h1>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    
+    let smiley = -1;
+    let loading = document.getElementById('smile');
+    const update = () => {
+      smiley++;
+      if (smiley > 3) smiley = -1;
+      loading.innerHTML = smiley == -1 ? '' : ('...'.substr(0, smiley));
+
+      if (!window.josekiLoaded) setTimeout(update, 500);
+    };
+
+    update();
+  </script>
+  <script>
+    // Bind functions to Inter Process Connection
+    const {ipcRenderer} = require('electron');
+
+    console.log('ipc binding');
+
+    // -------------------------------------------------------------
+    // Electron Application
+    
+    // quit to desktop
+    window.closeElectronApp = () => {
+      console.log("hello world");
+      ipcRenderer.send('close-me')
+    };
+
+    // full screen
+    window.electronFullScreen = (enabled) => {
+      ipcRenderer.send('toggle_fullscreen');
+    };
+
+    // -------------------------------------------------------------
+    // Steamworks
+
+    window.triggerAchievement = (achievement_name) => {
+      ipcRenderer.send('trigger_achievement', achievement_name);
+    };
+
+    // -------------------------------------------------------------
+    // Save / Load
+
+    // save
+    window.electronSave = (data, filename, platform_specific, steam_id) => {
+      console.log("Electron Saving");
+      ipcRenderer.send('save', data, filename, platform_specific, steam_id);
+    };
+
+    // load
+    window.electronLoad = (filename, platform_specific, steam_id) => {
+      console.log('electronLoad', filename, platform_specific, steam_id);
+      try {
+        console.log("Electron Loading");
+        return { data: ipcRenderer.sendSync('load', filename, platform_specific, steam_id), err: null }
+      } catch (err) {
+        return { data: null, err };
+      }
+    };
+  </script>
+  <div id="root"/>
+  <script type="module" src="./src/index.js"></script>
+</body>
+</html>

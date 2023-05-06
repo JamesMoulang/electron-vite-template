@@ -1,0 +1,6 @@
+node_modules
+.DS_Store
+development/dist
+production/game-assets
+production/assets
+production/index.html
