@@ -11,6 +11,12 @@
 
 # Scripts
 
+`appi` -> `install_all` -> `dev` -> `build` -> `start` -> `dist`
+
+`appi`
+
+initialise some values in `production/package.json`
+
 `install_all`
 
 run yarn install in `root` `production` `development`
@@ -26,6 +32,14 @@ build the contents of `development` and copy into `production`
 `preview`
 
 preview the static-asset version of the game in `development/dist`
+
+`start`
+
+run the electron app locally (without building a distributable)
+
+`dist`
+
+build a distributable electron app and notarise on macOS
 
 `copy_built`
 
