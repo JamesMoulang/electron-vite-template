@@ -9,7 +9,7 @@
     "copy_built": "echo '🦕 deleting old assets' && if test -f production/index.html; then rm production/index.html; fi && if [ -d production/assets ]; then rm -rf production/assets; fi && if [ -d production/game-assets ]; then rm -rf production/game-assets; fi && echo '🦕 copying new assets' && cp -r game/dist/* production/",
     "build_no_copy": "echo '🦕 building static assets' && cd development && vite build --base=./",
     "preview": "echo '🦕 previewing static assets' && cd development && vite preview",
-    "install_all": "echo '🦕 running yarn install in root/game/electron' && yarn install && cd development && yarn install && cd ../electron && yarn install && cd .."
+    "install_all": "echo '🦕 running yarn install in root/development/production' && yarn install && cd development && yarn install && cd ../electron && yarn install && cd .."
   },
   "devDependencies": {
     "vite": "^4.3.2"
