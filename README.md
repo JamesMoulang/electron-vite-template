@@ -1,38 +1,31 @@
-# Structure
 ```
-├── production: electron app, steam integration
-└── development: game files, served/built by vite
+electron-vite-template
+├── scripts
+├── production    // electron app, steam integration
+└── development   // game files, served/built by vite
 ```
 
 # First time setup
 
-- update `appBundleId` in `production/package.json` (and make sure there's an appropriate app id on apple developer portal)
-- update `name` in `production/package.json` (this will update the game name, and the folder used by save manager)
-- update app icons (how?)
-- update `title` in `development/index.html`
+- Run `yarn appi` to update `appBundleId` `savefilename` and `name` in `production/package.json`
+- update app icons
 
 # Scripts
 
-`install_all`
+## Typical workflow
 
-run yarn install in `root` `production` `development`
+`appi` -> `install_all` -> `dev` -> `build` -> `start` -> `dist`
 
-`dev`
+## Individual commands
 
-run a dev server to host the contents of `development`
-
-`build`
-
-build the contents of `development` and copy into `production`
-
-`preview`
-
-preview the static-asset version of the game in `development/dist`
-
-`copy_built`
-
-copy from `development/dist` into `production`
-
-`build_no_copy`
-
-build with copying into `production`
+| Command       | Description                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------------- |
+| `appi`        | Initialise some values in `production/package.json`                                                |
+| `install_all` | Run `yarn install` in `root`, `production`, and `development`                                       |
+| `dev`         | Run a dev server to host the contents of `development`                                              |
+| `build`       | Build the contents of `development` and copy into `production`                                      |
+| `preview`     | Preview the static-asset version of the game in `development/dist`                                  |
+| `start`       | Run the electron app locally (without building a distributable)                                     |
+| `dist`        | Build a distributable electron app and notarise on macOS                                            |
+| `copy_built`  | Copy from `development/dist` into `production`                                                      |
+| `build_no_copy` | Build without copying into `production`                                                             |
