@@ -11,7 +11,11 @@
 
 # Scripts
 
+Typical workflow (setup, develop, build, test, distribute):
+
 `appi` -> `install_all` -> `dev` -> `build` -> `start` -> `dist`
+
+Commands explained:
 
 `appi`
 
