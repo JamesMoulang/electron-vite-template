@@ -6,10 +6,8 @@
 
 # First time setup
 
-- update `appBundleId` in `production/package.json` (and make sure there's an appropriate app id on apple developer portal)
-- update `name` in `production/package.json` (this will update the game name, and the folder used by save manager)
-- update app icons (how?)
-- update `title` in `development/index.html`
+- Run `yarn appi` to update `appBundleId` `savefilename` and `name` in `production/package.json`
+- update app icons
 
 # Scripts
 
