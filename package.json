@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "init": "node scripts/init.js",
+    "appi": "node scripts/init.js",
     "dev": "echo '🦕 running dev server' && cd development && vite",
     "build": "yarn build_no_copy && yarn copy_built",
     "start": "echo '🦕 starting electron app' && cd production && yarn start",
