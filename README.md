@@ -17,38 +17,14 @@
 
 ## Individual commands
 
-`appi`
-
-initialise some values in `production/package.json`
-
-`install_all`
-
-run yarn install in `root` `production` `development`
-
-`dev`
-
-run a dev server to host the contents of `development`
-
-`build`
-
-build the contents of `development` and copy into `production`
-
-`preview`
-
-preview the static-asset version of the game in `development/dist`
-
-`start`
-
-run the electron app locally (without building a distributable)
-
-`dist`
-
-build a distributable electron app and notarise on macOS
-
-`copy_built`
-
-copy from `development/dist` into `production`
-
-`build_no_copy`
-
-build with copying into `production`
+| Command       | Description                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------------- |
+| `appi`        | Initialise some values in `production/package.json`                                                |
+| `install_all` | Run `yarn install` in `root`, `production`, and `development`                                       |
+| `dev`         | Run a dev server to host the contents of `development`                                              |
+| `build`       | Build the contents of `development` and copy into `production`                                      |
+| `preview`     | Preview the static-asset version of the game in `development/dist`                                  |
+| `start`       | Run the electron app locally (without building a distributable)                                     |
+| `dist`        | Build a distributable electron app and notarise on macOS                                            |
+| `copy_built`  | Copy from `development/dist` into `production`                                                      |
+| `build_no_copy` | Build without copying into `production`                                                             |
