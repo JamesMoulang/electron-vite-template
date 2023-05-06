@@ -1,8 +1,8 @@
 ```
 electron-vite-template
 ├── scripts
-├── production: electron app, steam integration
-└── development: game files, served/built by vite
+├── production    // electron app, steam integration
+└── development   // game files, served/built by vite
 ```
 
 # First time setup
