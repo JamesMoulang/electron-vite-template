@@ -36,7 +36,7 @@ app.whenReady().then(() => {
   console.log(`steam id is ${steam_manager.getSteamId().steamId64}.`);
 
   // initialise save manager - allows us to save/load game files
-  save_manager.init(mainWindow, ipcMain, steam_manager.getSteamId().steamId64, 'kana_save.json');
+  save_manager.init(mainWindow, ipcMain, steam_manager.getSteamId().steamId64, 'kana_save.json', 'You Can Kana');
 
   ipcMain.on('toggle_fullscreen', function() {
     if (mainWindow.isFullScreen()) {

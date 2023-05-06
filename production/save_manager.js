@@ -1,28 +1,38 @@
 const fs_extra = require('fs-extra');
 
-const getHome = (steam_id, filename) => {
+// windows
+// process.env.APPDATA + \\..\\LocalLow\\James Moulang\\You Can Kana\\' + steam_id + '\\' + filename;
+
+// macOS
+// process.env.HOME + '/Application Support/James Moulang/You Can Kana/' + steam_id + '/' + filename;
+
+// linux
+// '~/James Moulang/You Can Kana/' + steam_id + '/' + filename;
+
+const getHome = (steam_id, filename, gamename) => {
   // windows
   if (process.env.APPDATA)
-    return process.env.APPDATA + '\\..\\LocalLow\\James Moulang\\You Can Kana\\' + steam_id + '\\' + filename;
+    return `${process.env.APPDATA}\\..\\LocalLow\\James Moulang\\${gamename}\\${steam_id}\\${filename}`;
 
   // macOS
   if (process.platform == 'darwin')
-    return process.env.HOME + '/Application Support/James Moulang/You Can Kana/' + steam_id + '/' + filename;
+    return `${process.env.HOME}/Application Support/James Moulang/${gamename}/${steam_id}/${filename}`;
 
   // linux / all others
-  return '~/James Moulang/You Can Kana/' + steam_id + '/' + filename;
+  return `~/James Moulang/${gamename}/${steam_id}/${filename}`;
 };
 
-let steam_id, filename, save_file_url, mainWindow, ipc;
+let steam_id, filename, save_file_url, mainWindow, ipc, gamename;
 
-const init = (_mainWindow, _ipc, _steam_id, _filename) => {
+const init = (_mainWindow, _ipc, _steam_id, _filename, _gamename) => {
   // we'll use these later
   mainWindow = _mainWindow;
   ipc = _ipc;
   steam_id = _steam_id;
   filename = _filename;
+  gamename = _gamename;
 
-  save_file_url = getHome(steam_id, filename);
+  save_file_url = getHome(steam_id, filename, gamename);
 
   console.log(`save manager initialised with steam id ${steam_id}, filename ${filename} and save file url ${save_file_url}.`);
 
