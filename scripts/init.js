@@ -11,23 +11,27 @@ const rl = readline.createInterface({
 });
 
 // Prompt the user for the new package name
-rl.question(`Enter a new package name, used as the application name (${packageJson.name}): `, function(newName) {
+rl.question(`Enter a new package name (${packageJson.name}): `, function(newName) {
   // Update the name field in the package.json object
   packageJson.name = newName;
 
-  // Prompt the user for the new app bundle ID
-  rl.question(`Enter a new app bundle ID (${packageJson.appBundleId}): `, function(newAppBundleId) {
-    // Update the appBundleId field in the package.json object
-    packageJson.appBundleId = newAppBundleId;
+  rl.question(`Enter a new product name (${packageJson.productName}): `, function(newProductName) {
+    // Prompt the user for the new app bundle ID
+    packageJson.productName = newProductName;
+    
+    rl.question(`Enter a new app bundle ID (${packageJson.appBundleId}): `, function(newAppBundleId) {
+      // Update the appBundleId field in the package.json object
+      packageJson.appBundleId = newAppBundleId;
 
-    rl.question(`Enter a new save file name (${packageJson.savefilename}): `, function(newSaveFileName) {
-      packageJson.savefilename = newSaveFileName;
+      rl.question(`Enter a new save file name (${packageJson.savefilename}): `, function(newSaveFileName) {
+        packageJson.savefilename = newSaveFileName;
 
-      // Write the updated package.json object to the file
-      fs.writeFileSync('production/package.json', JSON.stringify(packageJson, null, 2));
+        // Write the updated package.json object to the file
+        fs.writeFileSync('production/package.json', JSON.stringify(packageJson, null, 2));
 
-      console.log('production/package.json has been updated!');
-      rl.close();
+        console.log('production/package.json has been updated!');
+        rl.close();
+      });
     });
   });
 });

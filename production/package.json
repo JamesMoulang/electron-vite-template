@@ -1,5 +1,6 @@
 {
   "name": "electron-vite-template-production",
+  "productName": "Product Name",
   "savefilename": "kana_save",
   "version": "1.0.0",
   "appBundleId": "com.jamesmoulang.you-can-kana-mac",
