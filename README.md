@@ -1,5 +1,5 @@
-# Structure
 ```
+electron-vite-template
 ├── production: electron app, steam integration
 └── development: game files, served/built by vite
 ```
