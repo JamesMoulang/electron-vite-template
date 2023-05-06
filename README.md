@@ -4,6 +4,13 @@
 └── development: game files, served/built by vite
 ```
 
+# First time setup
+
+- update `appBundleId` in `production/package.json` (and make sure there's an appropriate app id on apple developer portal)
+- update `name` in `production/package.json` (this will update the game name, and the folder used by save manager)
+- update app icons (how?)
+- update `title` in `development/index.html`
+
 # Scripts
 
 `install_all`
