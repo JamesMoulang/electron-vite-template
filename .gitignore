@@ -5,3 +5,5 @@ development/public/game-assets/circle.png
 production/game-assets
 production/assets
 production/index.html
+production/dist
+yarn-error.log

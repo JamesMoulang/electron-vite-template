@@ -1,5 +1,5 @@
 {
-  "name": "blank-electron-build",
+  "name": "electron-vite-template-production",
   "version": "1.0.0",
   "appBundleId": "com.jamesmoulang.you-can-kana-mac",
   "description": "A blank project for an electron application inc. notarization",
@@ -7,6 +7,7 @@
   "build": {
     "mac": {
       "category": "public.app-category.developer-tools",
+      "icon": "build_assets/mac/icon.png",
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
       "entitlements": "build_assets/mac/entitlements.plist",

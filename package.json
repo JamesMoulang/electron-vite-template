@@ -4,16 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "init": "node scripts/init.js",
     "dev": "echo '🦕 running dev server' && cd development && vite",
     "build": "yarn build_no_copy && yarn copy_built",
-    "copy_built": "echo '🦕 deleting old assets' && if test -f production/index.html; then rm production/index.html; fi && if [ -d production/assets ]; then rm -rf production/assets; fi && if [ -d production/game-assets ]; then rm -rf production/game-assets; fi && echo '🦕 copying new assets' && cp -r game/dist/* production/",
+    "start": "echo '🦕 starting electron app' && cd production && yarn start",
+    "dist": "echo '🦕 packaging electron app' && cd production && yarn app:dist",
+    "copy_built": "echo '🦕 deleting old assets' && if test -f production/index.html; then rm production/index.html; fi && if [ -d production/assets ]; then rm -rf production/assets; fi && if [ -d production/game-assets ]; then rm -rf production/game-assets; fi && echo '🦕 copying new assets' && cp -r development/dist/* production/",
     "build_no_copy": "echo '🦕 building static assets' && cd development && vite build --base=./",
     "preview": "echo '🦕 previewing static assets' && cd development && vite preview",
     "install_all": "echo '🦕 running yarn install in root/development/production' && yarn install && cd development && yarn install && cd ../electron && yarn install && cd .."
   },
   "devDependencies": {
+    "readline": "^1.3.0",
     "vite": "^4.3.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
