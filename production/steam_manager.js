@@ -33,7 +33,7 @@ const init = (_mainWindow, _ipc, steamapp_id=480) => {
 	});
 
 	ipc.on('check_achievement', (event, achievement_name) => {
-		event.returnValue = steamworks_client.isActivated(achievement_name);
+		event.returnValue = steamworks_client.achievement.isActivated(achievement_name);
 	});
 };
 

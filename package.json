@@ -6,6 +6,7 @@
   "scripts": {
     "appi": "node scripts/init.js",
     "dev": "echo '🦕 running dev server' && cd development && vite",
+    "bs": "yarn build && yarn start",
     "build": "yarn build_no_copy && yarn copy_built",
     "start": "echo '🦕 starting electron app' && cd production && yarn start",
     "dist": "echo '🦕 packaging electron app' && cd production && yarn app:dist",
