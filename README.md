@@ -26,6 +26,8 @@ electron-vite-template
 | `build`       | Build the contents of `development` and copy into `production`                                      |
 | `preview`     | Preview the static-asset version of the game in `development/dist`                                  |
 | `start`       | Run the electron app locally (without building a distributable)                                     |
+| `bs`          | Run `build` and run `start` immediately afterwards                                                  |
 | `dist`        | Build a distributable electron app and notarise on macOS                                            |
+| `dist_final`  | Same as `dist` but with dev tools disabled                                                          |
 | `copy_built`  | Copy from `development/dist` into `production`                                                      |
 | `build_no_copy` | Build without copying into `production`                                                             |
