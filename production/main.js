@@ -40,6 +40,10 @@ app.whenReady().then(() => {
   // initialise save manager - allows us to save/load game files
   save_manager.init(mainWindow, ipcMain, steam_manager.getSteamId().steamId64, `${savefilename}.json`, productName);
 
+  ipcMain.on('close-me', function() {
+    app.quit();
+  });
+
   ipcMain.on('toggle_fullscreen', function() {
     if (mainWindow.isFullScreen()) {
       mainWindow.setFullScreen(false);
