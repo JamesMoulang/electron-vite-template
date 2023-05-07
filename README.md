@@ -3,15 +3,18 @@ electron-vite-template
 ├── scripts
 ├── production    // electron app, steam integration
 └── development   // game files, served/built by vite
+    ├── public/game-assets    // images/audio/etc.
+    ├── index.html            // main game html page
+    └── src                   // scripts
 ```
 
 ![alt text](https://github.com/JamesMoulang/electron-vite-template/blob/main/structure.png?raw=true)
 
-
 # First time setup
 
 - Run `yarn appi` to update `appBundleId` `savefilename` and `name` in `production/package.json`
-- update app icons
+- update app icons in `production/build_assets`
+- add game development assets in `development`
 
 # Scripts
 
