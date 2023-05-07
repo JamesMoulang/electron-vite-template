@@ -13,17 +13,13 @@ electron-vite-template
 
 ![alt text](https://github.com/JamesMoulang/electron-vite-template/blob/main/structure.png?raw=true)
 
-# First time setup
+# Typical workflow
 
-- Run `yarn appi` to update `appBundleId` `savefilename` and `name` in `production/package.json`
-- update app icons in `production/build_assets`
-- add game development assets in `development`
-
-# Scripts
-
-## Typical workflow
-
-`appi` -> `install_all` -> `dev` -> `build` -> `start` -> `dist`
+1. Run `yarn appi` to update `appBundleId` `savefilename` and `name` in `production/package.json`
+1. Update app icons in `production/build_assets`
+1. Add game development assets in `development`
+1. Run `yarn install_all` to install node modules in `root`, `production`, and `development`
+1. `yarn dev` -> `yarn build` -> `yarn start` -> `yarn dist` to go from development, to building static assets, to testing a local electron app, to packaging a distributable.
 
 ## Individual commands
 
