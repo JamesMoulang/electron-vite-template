@@ -2,7 +2,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
-const { name, productName, savefilename } = require('./package.json');
+const { name, productName, savefilename, devTools } = require('./package.json');
 
 // managers
 const steam_manager = require('./steam_manager');
@@ -16,7 +16,8 @@ function createWindow () {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: false,
-      nodeIntegration: true
+      nodeIntegration: true,
+      devTools,
     }
   });
 
