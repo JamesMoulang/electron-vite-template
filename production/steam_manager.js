@@ -31,6 +31,10 @@ const init = (_mainWindow, _ipc, steamapp_id=480) => {
 	ipc.on('trigger_achievement', (event, achievement_name) => {
 		steamworks_client.achievement.activate(achievement_name);
 	});
+
+	ipc.on('check_achievement', (event, achievement_name) => {
+		event.returnValue = steamworks_client.isActivated(achievement_name);
+	});
 };
 
 module.exports = {init, getSteamId};

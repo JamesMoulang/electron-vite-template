@@ -75,6 +75,10 @@
       ipcRenderer.send('trigger_achievement', achievement_name);
     };
 
+    window.checkAchievement = (achievement_name) => {
+      return { data: ipcRenderer.sendSync('check_achievement', achievement_name), err: null };
+    };
+
     // -------------------------------------------------------------
     // Save / Load
 
