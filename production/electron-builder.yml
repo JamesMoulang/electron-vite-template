@@ -1,3 +1,0 @@
-hooks:
-  prepackager: |
-    sed -i.bak "s/__DEVTOOLS__/${env.devTools}/g" package.json
