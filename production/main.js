@@ -18,6 +18,7 @@ function createWindow () {
       contextIsolation: false,
       nodeIntegration: true,
       devTools,
+      title: productName,
     }
   });
 
