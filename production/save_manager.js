@@ -61,7 +61,7 @@ const init = (_mainWindow, _ipc, _steam_id, _filename, _gamename) => {
     console.log(`loading from ${save_file_url}`);
 
     try {
-      event.returnValue = fs.readFileSync(save_file_url, 'utf8');
+      event.returnValue = fs_extra.readFileSync(save_file_url, 'utf8');
     } catch (err) {
       event.returnValue = null;
     }
