@@ -2,7 +2,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
-const { name, savefilename } = require('./package.json');
+const { name, productName, savefilename } = require('./package.json');
 
 // managers
 const steam_manager = require('./steam_manager');
@@ -38,7 +38,7 @@ app.whenReady().then(() => {
   console.log(`steam id is ${steam_manager.getSteamId().steamId64}.`);
 
   // initialise save manager - allows us to save/load game files
-  save_manager.init(mainWindow, ipcMain, steam_manager.getSteamId().steamId64, `${savefilename}.json`, name);
+  save_manager.init(mainWindow, ipcMain, steam_manager.getSteamId().steamId64, `${savefilename}.json`, productName);
 
   ipcMain.on('toggle_fullscreen', function() {
     if (mainWindow.isFullScreen()) {
