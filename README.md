@@ -2,6 +2,9 @@
 electron-vite-template
 ├── scripts
 ├── production    // electron app, steam integration
+    ├── main.js                 // electron main process, talks to renderer process with IPC
+    ├── steam_manager.js        // <-> steamworks.js <-> Steamworks SDK
+    └── save_manager.js         // edits local files
 └── development   // game files, served/built by vite
     ├── public/game-assets    // images/audio/etc.
     ├── index.html            // main game html page
