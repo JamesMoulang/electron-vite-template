@@ -15,6 +15,7 @@ electron-vite-template
 
 # Typical workflow
 
+1. Clone and rename with `git clone https://github.com/JamesMoulang/electron-vite-template.git newname`
 1. Run `yarn appi` to update `appBundleId` `savefilename` and `name` in `production/package.json`
 1. Update app icons in `production/build_assets`
 1. Add game development assets in `development`
