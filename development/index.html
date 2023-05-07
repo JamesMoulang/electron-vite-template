@@ -79,17 +79,17 @@
     // Save / Load
 
     // save
-    window.electronSave = (data, filename, platform_specific, steam_id) => {
+    window.electronSave = (data) => {
       console.log("Electron Saving");
-      ipcRenderer.send('save', data, filename, platform_specific, steam_id);
+      ipcRenderer.send('save', data);
     };
+    
 
     // load
-    window.electronLoad = (filename, platform_specific, steam_id) => {
-      console.log('electronLoad', filename, platform_specific, steam_id);
+    window.electronLoad = () => {
       try {
         console.log("Electron Loading");
-        return { data: ipcRenderer.sendSync('load', filename, platform_specific, steam_id), err: null }
+        return { data: ipcRenderer.sendSync('load'), err: null }
       } catch (err) {
         return { data: null, err };
       }
