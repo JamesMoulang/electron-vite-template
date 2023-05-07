@@ -5,6 +5,9 @@ electron-vite-template
 └── development   // game files, served/built by vite
 ```
 
+![alt text](https://github.com/JamesMoulang/electron-vite-template/blob/main/structure.png?raw=true)
+
+
 # First time setup
 
 - Run `yarn appi` to update `appBundleId` `savefilename` and `name` in `production/package.json`
