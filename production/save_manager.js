@@ -42,6 +42,8 @@ const init = (_mainWindow, _ipc, _steam_id, _filename, _gamename) => {
   // save
   ipc.on('save', (event, data) => {
 
+    console.log(`saving to ${save_file_url}`);
+
     fs_extra.outputFileSync(save_file_url, data, (err) => {
       if (err) {
         console.log("Error saving data");
@@ -55,6 +57,8 @@ const init = (_mainWindow, _ipc, _steam_id, _filename, _gamename) => {
 
   // load
   ipc.on('load', (event) => {
+
+    console.log(`loading from ${save_file_url}`);
 
     try {
       event.returnValue = fs.readFileSync(save_file_url, 'utf8');
