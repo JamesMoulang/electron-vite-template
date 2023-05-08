@@ -8,9 +8,7 @@ const getSteamId = () => {
 	return steamworks_client.localplayer.getSteamId();
 };
 
-const init = (_mainWindow, _ipc, steamapp_id=480) => {
-	// we'll use these later.
-	mainWindow = _mainWindow;
+const init = (_ipc, steamapp_id=480) => {
 	ipc = _ipc;
 
 	// initialise steamworks.
