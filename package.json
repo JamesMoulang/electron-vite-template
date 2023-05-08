@@ -15,7 +15,8 @@
     "build_no_copy": "echo '🦕 building static assets' && cd development && vite build --base=./",
     "preview": "echo '🦕 previewing static assets' && cd development && vite preview",
     "install_all": "echo '🦕 running yarn install in root/development/production' && yarn install && cd development && yarn install && cd ../production && yarn install && cd ..",
-    "steam_mac": "~/Steam/steamcmd.sh +login $STEAM_ACCOUNT $STEAM_PASSWORD +run_app_build ./scripts/steam_build_mac_os.vdf +quit"
+    "install_steamcmd_osx": "mkdir steam && cd steam && curl -sqL 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz' | tar zxvf -",
+    "steam_mac": "./steam/steamcmd.sh +login $STEAM_ACCOUNT $STEAM_PASSWORD +run_app_build ../scripts/steam_build_mac_os.vdf +quit"
   },
   "devDependencies": {
     "readline": "^1.3.0",
