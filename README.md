@@ -24,16 +24,18 @@ electron-vite-template
 
 ## Individual commands
 
-| Command       | Description                                                                                         |
-| ------------- | --------------------------------------------------------------------------------------------------- |
-| `appi`        | Initialise some values in `production/package.json`                                                |
-| `install_all` | Run `yarn install` in `root`, `production`, and `development`                                       |
-| `dev`         | Run a dev server to host the contents of `development`                                              |
-| `build`       | Build the contents of `development` and copy into `production`                                      |
-| `preview`     | Preview the static-asset version of the game in `development/dist`                                  |
-| `start`       | Run the electron app locally (without building a distributable)                                     |
-| `bs`          | Run `build` and run `start` immediately afterwards                                                  |
-| `dist`        | Build a distributable electron app and notarise on macOS                                            |
-| `dist_final`  | Same as `dist` but with dev tools disabled                                                          |
-| `copy_built`  | Copy from `development/dist` into `production`                                                      |
-| `build_no_copy` | Build without copying into `production`                                                             |
+| Command                   | Description                                                                                           |
+| --------------------------| ----------------------------------------------------------------------------------------------------- |
+| `appi`                    | Initialise some values in `production/package.json`                                                   |
+| `install_all`             | Run `yarn install` in `root`, `production`, and `development`                                         |
+| `dev`                     | Run a dev server to host the contents of `development`                                                |
+| `build`                   | Build the contents of `development` and copy into `production`                                        |
+| `preview`                 | Preview the static-asset version of the game in `development/dist`                                    |
+| `start`                   | Run the electron app locally (without building a distributable)                                       |
+| `bs`                      | Run `build` and run `start` immediately afterwards                                                    |
+| `dist`                    | Build a distributable electron app and notarise on macOS                                              |
+| `dist_final`              | Same as `dist` but with dev tools disabled                                                            |
+| `copy_built`              | Copy from `development/dist` into `production`                                                        |
+| `build_no_copy`           | Build without copying into `production`                                                               |
+| `install_steamcmd_osx`    | Install `steamcmd` in the root directory                                                              |
+| `steam_mac`               | Upload game files to steam using the config in `scripts/steam_build_mac_os.vdf`                       |
