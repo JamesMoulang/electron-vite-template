@@ -19,6 +19,9 @@ const init = (_mainWindow, _ipc, steamapp_id=480) => {
 	
 	console.log(`Initialised steamworks, username is ${steamworks_client.localplayer.getName()}.`);
 
+	// enable overlay
+	steamworks.electronEnableSteamOverlay();
+
 	// -------------------------------------------------------------
 	// Bind functions to Inter Process Connection
 
