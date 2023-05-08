@@ -16,7 +16,7 @@ const getHome = (steam_id, filename, gamename) => {
 
   // macOS
   if (process.platform == 'darwin')
-    return `${process.env.HOME}/Application Support/James Moulang/${gamename}/${steam_id}/${filename}`;
+    return `${process.env.HOME}/Library/Application Support/James Moulang/${gamename}/${steam_id}/${filename}`;
 
   // linux / all others
   return `~/James Moulang/${gamename}/${steam_id}/${filename}`;
