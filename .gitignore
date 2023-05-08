@@ -7,3 +7,4 @@ production/assets
 production/index.html
 production/dist
 yarn-error.log
+./steam
