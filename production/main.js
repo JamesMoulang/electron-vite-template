@@ -33,8 +33,8 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   // initialise steamworks - allows us to talk to steam API
-  steam_manager.init(mainWindow, ipcMain, 1031900);
-  
+  steam_manager.init(ipcMain, 1031900);
+
   const mainWindow = createWindow();
 
   console.log(`steam id is ${steam_manager.getSteamId().steamId64}.`);
