@@ -14,7 +14,8 @@
     "copy_built": "echo '🦕 deleting old assets' && if test -f production/index.html; then rm production/index.html; fi && if [ -d production/assets ]; then rm -rf production/assets; fi && if [ -d production/game-assets ]; then rm -rf production/game-assets; fi && echo '🦕 copying new assets' && cp -r development/dist/* production/",
     "build_no_copy": "echo '🦕 building static assets' && cd development && vite build --base=./",
     "preview": "echo '🦕 previewing static assets' && cd development && vite preview",
-    "install_all": "echo '🦕 running yarn install in root/development/production' && yarn install && cd development && yarn install && cd ../production && yarn install && cd .."
+    "install_all": "echo '🦕 running yarn install in root/development/production' && yarn install && cd development && yarn install && cd ../production && yarn install && cd ..",
+    "steam_mac": "~/Steam/steamcmd.sh +login $STEAM_ACCOUNT $STEAM_PASSWORD +run_app_build scripts/steam_build_mac_os.vdf +quit"
   },
   "devDependencies": {
     "readline": "^1.3.0",
