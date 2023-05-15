@@ -2,7 +2,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
-const { name, productName, savefilename, devTools } = require('./package.json');
+const { name, productName, savefilename, devTools, steamapp_id } = require('./package.json');
 
 // managers
 const steam_manager = require('./steam_manager');
@@ -33,7 +33,7 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   // initialise steamworks - allows us to talk to steam API
-  steam_manager.init(ipcMain, 1031900);
+  steam_manager.init(ipcMain, steamapp_id);
 
   const mainWindow = createWindow();
 
