@@ -18,9 +18,10 @@ electron-vite-template
 1. Clone and rename with `git clone https://github.com/JamesMoulang/electron-vite-template.git newname`
 1. Run `yarn appi` to update `appBundleId` `savefilename` and `name` in `production/package.json`
 1. Update app icons in `production/build_assets`
-1. Add game development assets in `development`
-1. Run `yarn install_all` to install node modules in `root`, `production`, and `development`
-1. `yarn dev` -> `yarn build` -> `yarn start` -> `yarn dist` to go from development, to building static assets, to testing a local electron app, to packaging a distributable.
+2. Set up environment variables: `export STEAM_PASSWORD=password` `STEAM_ACCOUNT` `APPLE_ID` `APPLE_ID_PASSWORD`
+3. Add game development assets in `development`
+4. Run `yarn install_all` to install node modules in `root`, `production`, and `development`
+5. `yarn dev` -> `yarn build` -> `yarn start` -> `yarn dist` to go from development, to building static assets, to testing a local electron app, to packaging a distributable.
 
 ## Individual commands
 
