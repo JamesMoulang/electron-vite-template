@@ -1,3 +1,15 @@
+This project is designed as a starting point for a Steam game running on Electron from development to distribution. Just clone it, add your game files, and start working.
+
+- [steamworks.js](https://github.com/ceifa/steamworks.js) for Steamworks SDK
+- Notarisation on macOS
+- Vite for dev server and bundling assets
+- electron-builder to package as an app and notarise for macOS
+- Script to upload to Steam
+
+Read the notes I made while setting this up [here](https://github.com/JamesMoulang/electron-notes)
+
+# Structure of this project
+
 ```
 electron-vite-template
 ├── scripts
