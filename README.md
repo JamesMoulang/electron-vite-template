@@ -1,4 +1,4 @@
-This project is designed as a starting point for a Steam game running on Electron from development to distribution. Just clone it, add your game files, and start working.
+This project is designed as a starting point for a Steam game running on Electron from development to distribution. Just clone it, add your game files, and start working!
 
 - [steamworks.js](https://github.com/ceifa/steamworks.js) for Steamworks SDK
 - Notarisation on macOS
